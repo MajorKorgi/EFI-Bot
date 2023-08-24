@@ -10,6 +10,24 @@ const client = new Client({
 });
 
 const {token} = require('./config.json'); //The Token of the Bot
+const {prefix} = require('./config.json'); //The Prefix of the Bot
+
+
+
+//SET COLLECTION
+client.commandes = new Collection();
+client.slash = new Collection();
+client.aliases = new Collection();
+cooldowns = new Collection();
+// Definitiv nicht aus dem Internetz geklaut xD
+
+
+module.exports = async (client) => {
+    client.logger.info(`[!] ${client.user.username} is now started...`)
+    client.logger.info(`[!] The bot have ${client.commandes.size} commands and ${client.slash.size} (/) commands`)
+    client.user.setActivity(`${prefix}help | over Untis`, { type: 'WATCHING' })
+};
+
 
 console.log("Bot is Online"); //The Log of the Bot
 client.login(token); //The Login of the Bot
