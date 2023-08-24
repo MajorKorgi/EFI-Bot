@@ -29,6 +29,7 @@ module.exports = async (client) => {
 };
 
 
+
 console.log("Bot is Online"); //The Log of the Bot
 client.login(token); //The Login of the Bot
 
