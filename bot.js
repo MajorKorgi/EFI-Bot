@@ -23,9 +23,9 @@ cooldowns = new Collection();
 
 
 module.exports = async (client) => {
-    client.logger.info(`[!] ${client.user.username} is now started...`)
-    client.logger.info(`[!] The bot have ${client.commandes.size} commands and ${client.slash.size} (/) commands`)
-    client.user.setActivity(`${prefix}help | over Untis`, { type: 'WATCHING' })
+    client.logger.info(`[!] ${client.user.username} is now started...`);
+    client.logger.info(`[!] The bot have ${client.commandes.size} commands and ${client.slash.size} (/) commands`);
+    client.user.setActivity(`over Untis`, { type: 'WATCHING' });
 };
 
 
