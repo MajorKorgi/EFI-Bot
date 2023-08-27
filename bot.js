@@ -1,56 +1,19 @@
 const botCreator = "AveGamers"; //The Name of the Bot Creator. Its just a way to use it in the code.
 
-var fs = require('fs'); //File System   //This is a way to use the File System in Node.js
+const fs = require('fs'); //File System   //This is a way to use the File System in Node.js
+const Discord = require('discord.js'); //Discord.js   //This is a way to use the Discord.js in Node.js
+const config = require('./config.json'); //Config.json   //This is a way to use the Config.json in Node.js
 
-const { Client, Collection, GatewayIntentBits } = require("discord.js");
-const client = new Client({
-    allowedMentions: { parse: ['users', 'roles'] },
-    fetchAllMembers: false,
-    intents: [ GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.MessageContent ],
-});
-
-const {token} = require('./config.json'); //The Token of the Bot
-const {prefix} = require('./config.json'); //The Prefix of the Bot
-
-
-
-//SET COLLECTION
-client.commandes = new Collection();
-client.slash = new Collection();
-client.aliases = new Collection();
-cooldowns = new Collection();
-// Definitiv nicht aus dem Internetz geklaut xD
-
-
-module.exports = async (client) => {
-    client.logger.info(`[!] ${client.user.username} is now started...`);
-    client.logger.info(`[!] The bot have ${client.commandes.size} commands and ${client.slash.size} (/) commands`);
-    client.user.setActivity(`over Untis`, { type: 'WATCHING' });
-};
-
-
-
-console.log("Bot is Online"); //The Log of the Bot
-client.login(token); //The Login of the Bot
+const client = new Discord.Client(); //Discord Client   //This is a way to use the Discord Client in Node.js
 
 
 
 
 
-/*
-function test(x,y, test) {
-    console.log(test, x +y);
+
+client.on('ready', () => { //Discord Client Ready Event
+
+    console.log(`Logged in as ${client.user.tag}!`); //Console Log
+
 }
-
-test(1, 2, 2);
-
-const const1 = {
-
-    color: "red",
-    size: 12,
-    name: "AveGamers"
-
-};
-
-console.log(const1.color);
-*/
+client.login(config.token); //Discord Client Login   //This is a way to use the Discord Client Login in Node.js
