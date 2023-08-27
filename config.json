@@ -1,9 +1,11 @@
 {
-    "token": "",
+    "token": "MTE0NDM2MDExODU0NTI5MzMyMw.GSxGVc.f7NfAGvepWMmAxR1bYEl5RbyXraesSC_R_NOJE",
     "status": {
         "text": "{prefix}help | EFI-Bot",
         "text2": "By: Jonas Techand | AveGamers",
         "type": "PLAYING",
         "url": "https://avegamers.net"
-     }
+     },
+    "clientId": "1144360118545293323",
+	"guildId": "1143083592319238245"
 }
