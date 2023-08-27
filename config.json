@@ -1,4 +1,9 @@
 {
     "token": "",
-    "prefix": "!"
+    "status": {
+        "text": "{prefix}help | EFI-Bot",
+        "text2": "By: Jonas Techand | AveGamers",
+        "type": "PLAYING",
+        "url": "https://avegamers.net"
+     }
 }
