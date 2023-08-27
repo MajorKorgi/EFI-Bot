@@ -6,7 +6,6 @@
   "description": "> -> Discord Bot\r > -> Show Ping and Resource Info\r > -> Get Informations from webuntis.com and show plan, teachers and rooms in discord\r > -> ...",
   "version": "1.0.0",
   "main": "bot.js",
-  "devDependencies": {},
   "scripts": {
     "test": "ping"
   },
