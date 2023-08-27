@@ -15,5 +15,5 @@ client.on('ready', () => { //Discord Client Ready Event
 
     console.log(`Logged in as ${client.user.tag}!`); //Console Log
 
-}
+})
 client.login(config.token); //Discord Client Login   //This is a way to use the Discord Client Login in Node.js
